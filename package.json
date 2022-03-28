@@ -1,0 +1,24 @@
+{
+  "name": "recipe-app-backend",
+  "version": "1.0.0",
+  "description": "<div align='center'>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeNameAshley/recipe-app-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeNameAshley/recipe-app-backend/issues"
+  },
+  "homepage": "https://github.com/CodeNameAshley/recipe-app-backend#readme",
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-plugin-react": "^7.29.4"
+  }
+}
