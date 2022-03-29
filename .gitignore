@@ -2,5 +2,8 @@
 /node_modules
 
 # api keys
-/.env
-/.env.test
+**/.env
+**/.env.test
+
+.env
+.env.test
