@@ -4,7 +4,11 @@
   "description": "<div align='center'>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "node utils/create-database.js",
+    "start": "nodemon -r dotenv/config index.js",
+    "pretest": "node utils/create-database.js test",
+    "test": "mocha tests/**/*.js --exit --recursive --timeout 60000 --file ./tests/test-setup.js",
+    "posttest": "node utils/drop-database.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +22,16 @@
   },
   "homepage": "https://github.com/CodeNameAshley/recipe-app-backend#readme",
   "devDependencies": {
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
     "eslint": "^8.12.0",
-    "eslint-plugin-react": "^7.29.4"
+    "eslint-plugin-react": "^7.29.4",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3"
   }
 }
