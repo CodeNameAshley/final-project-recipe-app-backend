@@ -5,5 +5,5 @@
 **/.env
 **/.env.test
 
-.env
-.env.test
+/.env
+/.env.test
