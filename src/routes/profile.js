@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const {
-    getProfile,
-} = require('../controllers/profile')
+const createProfile = require('../controllers/profile')
+const getProfiles = require('../controllers/profile')
 
-router.post('/', getProfile)
+router.post('/', createProfile.create)
+router.get('/', getProfiles.get )
 
 module.exports = router;

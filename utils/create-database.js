@@ -33,6 +33,13 @@ const setUpDatabase = async () => {
 
     // create the database if it doesn't already exist
     await db.query(`CREATE DATABASE IF NOT EXISTS ${DB_NAME}`);
+    await db.query(`USE ${DB_NAME}`);
+    await db.query(`CREATE TABLE IF NOT EXISTS FoodleProfile (
+      id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+      email VARCHAR(100),
+      firstName VARCHAR(50)
+      )`);
+
     db.close();
 
   } catch (err) {
