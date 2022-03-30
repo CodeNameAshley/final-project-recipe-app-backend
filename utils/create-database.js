@@ -40,6 +40,8 @@ const setUpDatabase = async () => {
       firstName VARCHAR(50)
       )`);
 
+    await db.query(`CREATE TABLE IF NOT EXISTS RecipeCard (id INT NOT NULL, image VARCHAR(100), title VARCHAR(100))`);
+
     db.close();
 
   } catch (err) {
