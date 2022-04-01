@@ -15,9 +15,7 @@ exports.create = async (req,res) => {
             firstName,
           ]);
 
-        res.send('Profile Added')
-        res.status(201)
-        // res.end();
+        res.send('Profile Added').status(200)
     } catch (err) {
         res.status(500).json(err)
     }
